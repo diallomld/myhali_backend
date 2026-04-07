@@ -1,0 +1,53 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+autopep8 = "*"
+pylint = "*"
+black = "*"
+
+[packages]
+appdirs = "==1.4.3"
+astroid = "==2.3.3"
+autopep8 = "==1.5"
+colorama = "==0.4.3"
+distlib = "==0.3.0"
+dj-database-url = "==0.5.0"
+django = "==2.2"
+django-heroku = "==0.3.1"
+django-phonenumber-field = "==4.0.0"
+djangorestframework = "==3.11.0"
+filelock = "==3.0.12"
+gunicorn = "==20.0.4"
+importlib-metadata = "==1.5.0"
+importlib-resources = "==1.3.1"
+isort = "==4.3.21"
+lazy-object-proxy = "==1.4.3"
+mccabe = "==0.6.1"
+phonenumbers = "==8.11.5"
+psycopg2 = "==2.8.4"
+pycodestyle = "==2.5.0"
+pylint = "==2.4.4"
+pytz = "==2019.3"
+six = "==1.14.0"
+sqlparse = "==0.3.1"
+typed-ast = "==1.4.1"
+virtualenv = "==20.0.10"
+whitenoise = "==3.3.1"
+wrapt = "==1.11.2"
+zipp = "==3.1.0"
+Babel = "==2.8.0"
+pylint-django = "*"
+psycopg2-binary = "*"
+djangorestframework-simplejwt = "==4.4"
+requests = "*"
+numpy = "*"
+pyjwt = "==1.7.1"
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
