@@ -13,9 +13,12 @@ from api.serializers import *
 from api.letters import *
 
 # Create your views here.
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 
 
 # Register API
+@method_decorator(csrf_exempt, name='dispatch')
 class RegisterApi(generics.GenericAPIView):
     serializer_class = RegisterSerializer
 

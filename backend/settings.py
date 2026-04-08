@@ -31,7 +31,7 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 if DEBUG:
-    CSRF_TRUSTED_ORIGINS += ["http://localhost:3000", "http://127.0.0.1"]
+    CSRF_TRUSTED_ORIGINS += ["http://localhost:3000", "http://127.0.0.1", "exp://192.168.1.5:19000", "http://localhost:19002/"]
 
 ALLOWED_HOSTS = ["*","myhali-backend.onrender.com/","localhost","127.0.0.1","adressage-backend.herokuapp.com/", "exp://192.168.0.108:19000", "exp://192.168.1.5:19000", "http://localhost:19002/"]
 
