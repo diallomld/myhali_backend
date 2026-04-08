@@ -98,11 +98,10 @@ WSGI_APPLICATION = "backend.wsgi.application"
 } """
 DATABASES = {
     'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgresql://myhalibackend_dqf3_user:9CXwalrndZPFR7sfTHsxzsyX2PFyH9cV@dpg-d7annsma2pns738ts1p0-a.oregon-postgres.render.com/myhalibackend_dqf3',
+        default='postgresql://myhalibackend_dqf3_user:9CXwalrndZPFR7sfTHsxzsyX2PFyH9cV@dpg-d7annsma2pns738ts1p0-a/myhalibackend_dqf3',
         conn_max_age=600
-     )
-     }
+    )
+}
 
 
 
