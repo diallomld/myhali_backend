@@ -98,8 +98,10 @@ WSGI_APPLICATION = "backend.wsgi.application"
 } """
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://myhalibackend_dqf3_user:9CXwalrndZPFR7sfTHsxzsyX2PFyH9cV@dpg-d7annsma2pns738ts1p0-a/myhalibackend_dqf3',
-        conn_max_age=600
+        # On récupère l'URL depuis les variables d'environnement de Render
+        default=os.environ.get('DATABASE_URL'),
+        conn_max_age=600,
+        conn_params={'sslmode': 'require'} # FORCE la connexion sécurisée
     )
 }
 
