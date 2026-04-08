@@ -1,1 +1,1 @@
-web: gunicorn backend.wsgi --log-file -
+web: gunicorn myhali_backend.asgi:application -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT
