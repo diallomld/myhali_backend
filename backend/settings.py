@@ -26,8 +26,14 @@ SECRET_KEY = "y#(fg9$dj)-7$yn22dq8mjlp=km8g3rc%x1@nco_99^5iv#-qi"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+CSRF_TRUSTED_ORIGINS = [
+    "https://myhali-backend.onrender.com",
+]
 
-ALLOWED_HOSTS = ["*","myhali-backend.onrender.com","localhost","127.0.0.1","adressage-backend.herokuapp.com/", "exp://192.168.0.108:19000"]
+if DEBUG:
+    CSRF_TRUSTED_ORIGINS += ["http://localhost:3000", "http://127.0.0.1"]
+
+ALLOWED_HOSTS = ["*","myhali-backend.onrender.com/","localhost","127.0.0.1","adressage-backend.herokuapp.com/", "exp://192.168.0.108:19000", "exp://192.168.1.5:19000", "http://localhost:19002/"]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Application definition
