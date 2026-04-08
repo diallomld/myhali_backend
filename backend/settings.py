@@ -101,9 +101,6 @@ DATABASES = {
         default=os.environ.get('DATABASE_URL'),
         conn_max_age=600,
         # Utilise 'settings' pour passer les options spécifiques au moteur
-        settings={
-            'sslmode': 'require',
-        }
     )
 }
 
