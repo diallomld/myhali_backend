@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*","myhali-backend.onrender.com","localhost","127.0.0.1","adressage-backend.herokuapp.com/", "exp://192.168.0.108:19000"]
 
-
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Application definition
 
 INSTALLED_APPS = [
