@@ -28,12 +28,28 @@ SECRET_KEY = "y#(fg9$dj)-7$yn22dq8mjlp=km8g3rc%x1@nco_99^5iv#-qi"
 DEBUG = True
 CSRF_TRUSTED_ORIGINS = [
     "https://myhali-backend.onrender.com",
+    "http://localhost:3000",
+    "http://127.0.0.1",
 ]
 
 if DEBUG:
-    CSRF_TRUSTED_ORIGINS += ["http://localhost:3000", "http://127.0.0.1", "exp://192.168.1.5:19000", "http://localhost:19002/","exp://127.0.0.1:19000"]
+    CSRF_TRUSTED_ORIGINS += [
+        "exp://192.168.1.5:19000", 
+        "http://localhost:19002",
+        "exp://127.0.0.1:19000",
+        "http://10.0.2.2:8000", # Android Simulator
+    ]
 
-ALLOWED_HOSTS = ["*","myhali-backend.onrender.com/","localhost","127.0.0.1","adressage-backend.herokuapp.com/", "exp://192.168.0.108:19000", "exp://192.168.1.5:19000", "http://localhost:19002/","exp://127.0.0.1:19000"]
+ALLOWED_HOSTS = [
+    "*",
+    "myhali-backend.onrender.com",
+    "localhost",
+    "127.0.0.1",
+    "adressage-backend.herokuapp.com",
+    "10.0.2.2",
+]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Application definition
