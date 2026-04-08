@@ -98,10 +98,12 @@ WSGI_APPLICATION = "backend.wsgi.application"
 } """
 DATABASES = {
     'default': dj_database_url.config(
-        # On récupère l'URL depuis les variables d'environnement de Render
         default=os.environ.get('DATABASE_URL'),
         conn_max_age=600,
-        conn_params={'sslmode': 'require'} # FORCE la connexion sécurisée
+        # Utilise 'settings' pour passer les options spécifiques au moteur
+        settings={
+            'sslmode': 'require',
+        }
     )
 }
 
