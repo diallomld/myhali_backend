@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 import django_heroku
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
     "api",
     "rest_framework",
@@ -84,7 +86,7 @@ WSGI_APPLICATION = "backend.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         "NAME": "myhali",
@@ -93,7 +95,15 @@ DATABASES = {
         "HOST": "localhost",
         "PORT": "5432",
     }
-}
+} """
+DATABASES = {
+    'default': dj_database_url.config(
+        # Replace this value with your local database's connection string.
+        default='postgresql://myhalibackend_dqf3_user:9CXwalrndZPFR7sfTHsxzsyX2PFyH9cV@dpg-d7annsma2pns738ts1p0-a.oregon-postgres.render.com/myhalibackend_dqf3',
+        conn_max_age=600
+     )
+     }
+
 
 
 # Password validation
